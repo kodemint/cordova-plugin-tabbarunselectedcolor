@@ -2,9 +2,17 @@
 #import "UIImage+Overlay.h"
 
 @implementation CDVTabBarUnselected
+
+// -(CDVPlugin*) initWithWebView:(UIWebView*)theWebView
+// {
+//     self = (TabBar*)[super initWithWebView:theWebView];
+
+// }
+
 - (void)pluginInitialize
 {
-    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UIViewController *rootViewController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+    UITabBarController *tabBarController = (UITabBarController *)rootViewController;
     UITabBar *tabBar = tabBarController.tabBar;
     [tabBar setTintColor:[UIColor blueColor]];
     UIColor * unselectedColor = [UIColor whiteColor];
@@ -26,6 +34,16 @@
 
     [self success:result callbackId:callbackId];
 }
+
+- (UIColor*)colorStringToColor:(NSString*)colorStr
+{
+    NSArray *rgba = [colorStr componentsSeparatedByString:@","];
+    return [UIColor colorWithRed:[[rgba objectAtIndex:0] intValue]/255.0f
+                           green:[[rgba objectAtIndex:1] intValue]/255.0f
+                            blue:[[rgba objectAtIndex:2] intValue]/255.0f
+                           alpha:[[rgba objectAtIndex:3] intValue]/255.0f];
+}
+
 
 @end
 
