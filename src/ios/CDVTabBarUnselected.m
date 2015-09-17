@@ -3,16 +3,6 @@
 
 @implementation CDVTabBarUnselected
 
-// -(CDVPlugin*) initWithWebView:(UIWebView*)theWebView
-// {
-//     self = (TabBar*)[super initWithWebView:theWebView];
-
-// }
-
-- (void)pluginInitialize
-{
-
-}
 
 - (void)setColorforUnselected:(CDVInvokedUrlCommand*)command
 {
@@ -31,11 +21,12 @@
     //     item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     // }
 
-    CDVPluginResult* result = [CDVPluginResult
+    CDVPluginResult* presult = [CDVPluginResult
                                resultWithStatus:CDVCommandStatus_OK
                                messageAsString:msg];
 
-    [self success:result callbackId:callbackId];
+    [self.commandDelegate sendPluginResult:presult callbackId:callbackId];
+
 }
 
 - (UIColor*)colorStringToColor:(NSString*)colorStr
