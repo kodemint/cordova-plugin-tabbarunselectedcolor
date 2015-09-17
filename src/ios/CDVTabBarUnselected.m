@@ -22,14 +22,14 @@
 
 
 
-    UIViewController *rootViewController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
-    UITabBarController *tabBarController = (UITabBarController *)rootViewController;
-    UITabBar *tabBar = tabBarController.tabBar;
-    [tabBar setTintColor:[UIColor blueColor]];
-    UIColor * unselectedColor = [UIColor whiteColor];
-    for(UITabBarItem *item in tabBar.items) {
-        item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    }
+    // UIViewController *rootViewController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+    // UITabBarController *tabBarController = (UITabBarController *)rootViewController;
+    // UITabBar *tabBar = tabBarController.tabBar;
+    // [tabBar setTintColor:[UIColor blueColor]];
+    // UIColor * unselectedColor = [UIColor whiteColor];
+    // for(UITabBarItem *item in tabBar.items) {
+    //     item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    // }
 
     CDVPluginResult* result = [CDVPluginResult
                                resultWithStatus:CDVCommandStatus_OK
