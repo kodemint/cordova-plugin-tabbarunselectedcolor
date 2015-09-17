@@ -1,4 +1,5 @@
 #import "CDVTabBarUnselected.h"
+#import "UIImage+Overlay.h"
 
 @implementation CDVTabBarUnselected
 - (void)pluginInitialize
