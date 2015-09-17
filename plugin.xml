@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.sdl.TabBarUnselected"
+        version="0.1.0">
+
+  <name>TabBarUnselected</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/tabbarunselected.js" target="js/tabbarunselected.js"/>
+
+  <js-module src="www/tabbarunselected.js" name="tabbarunselected">
+    <clobbers target="tabbarunselected" />
+  </js-module>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="TabBarUnselected">
+        <param name="ios-package" value="CDVTabBarUnselected" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/CDVTabBarUnselected.h" target-dir="TabBarUnselectedPlugin"/>
+    <source-file src="src/ios/CDVTabBarUnselected.m" target-dir="TabBarUnselectedPlugin"/>
+  </platform>
+
+</plugin>
