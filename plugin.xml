@@ -5,18 +5,12 @@
 
   <name>TabBarUnselected</name>
 
-  <engines>
-    <engine name="cordova" version=">=3.4.0"/>
-  </engines>
-
-  <asset src="www/tabbarunselected.js" target="js/tabbarunselected.js"/>
-
   <js-module src="www/tabbarunselected.js" name="tabbarunselected">
     <clobbers target="tabbarunselected" />
   </js-module>
 
   <platform name="ios">
-    <config-file target="config.xml" parent="/widget">
+    <config-file target="config.xml" parent="/*">
       <feature name="TabBarUnselected">
         <param name="ios-package" value="CDVTabBarUnselected" />
       </feature>
