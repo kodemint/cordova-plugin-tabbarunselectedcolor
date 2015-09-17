@@ -11,6 +11,17 @@
 
 - (void)pluginInitialize
 {
+
+}
+
+- (void)setColorforUnselected:(CDVInvokedUrlCommand*)command
+{
+    NSString* callbackId = [command callbackId];
+    NSString* color = [[command arguments] objectAtIndex:0];
+    NSString* msg = [NSString stringWithFormat: @"Hello, %@", color];
+
+
+
     UIViewController *rootViewController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
     UITabBarController *tabBarController = (UITabBarController *)rootViewController;
     UITabBar *tabBar = tabBarController.tabBar;
@@ -19,14 +30,6 @@
     for(UITabBarItem *item in tabBar.items) {
         item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }
-
-}
-
-- (void)setColorforUnselected:(CDVInvokedUrlCommand*)command
-{
-    NSString* callbackId = [command callbackId];
-    NSString* name = [[command arguments] objectAtIndex:0];
-    NSString* msg = [NSString stringWithFormat: @"Hello, %@", name];
 
     CDVPluginResult* result = [CDVPluginResult
                                resultWithStatus:CDVCommandStatus_OK
