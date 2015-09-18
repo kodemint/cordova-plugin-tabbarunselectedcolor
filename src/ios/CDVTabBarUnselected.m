@@ -18,7 +18,7 @@
     {
         CDVPluginResult* presult = [CDVPluginResult
                                resultWithStatus:CDVCommandStatus_OK
-                               messageAsString:msg];
+                               messageAsString:@"Error"];
 
         [self.commandDelegate sendPluginResult:presult callbackId:callbackId];
 
