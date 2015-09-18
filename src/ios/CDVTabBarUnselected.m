@@ -21,7 +21,7 @@
     // if (rootViewController == nil)
     //     NSLog(@"Error- No Root Found"); 
     
-    UITabBarController *tabBarController = (UITabBarController *)self.webView.superview.presentingViewController;
+    UITabBarController *tabBarController = (UITabBarController *)self.viewController;
     if (tabBarController == nil)
         NSLog(@"Error- No Tab Controller Found"); 
     NSLog(@"%@", tabBarController);
