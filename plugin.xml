@@ -3,7 +3,7 @@
         id="com.sdl.TabBarUnselected"
         version="0.2.0">
 
-  <name>TabBarUnselected</name>
+  <name>CDVTabBarUnselected</name>
   
   <asset src="www/tabbarunselected.js" target="tabbarunselected.js" />
 
@@ -17,6 +17,8 @@
       <feature name="TabBarUnselected">
         <param name="ios-package" value="CDVTabBarUnselected" />
       </feature>
+       <plugin name="CDVTabBarUnselected" value="CDVTabBarUnselected"/>
+
     </config-file>
 
     <header-file src="src/ios/CDVTabBarUnselected.h" target-dir="TabBarUnselectedPlugin"/>
