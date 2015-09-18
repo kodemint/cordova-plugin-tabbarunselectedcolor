@@ -21,7 +21,8 @@
     // if (rootViewController == nil)
     //     NSLog(@"Error- No Root Found"); 
     
-    UITabBarController *tabBarController = (UITabBarController *)self.viewController;
+    UITabBarController *tabBarController = (UITabBarController *)self.viewController.tabBarController;
+    
     if (tabBarController == nil)
         NSLog(@"Error- No Tab Controller Found"); 
     NSLog(@"%@", tabBarController);
