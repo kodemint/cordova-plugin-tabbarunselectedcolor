@@ -14,7 +14,7 @@
   <platform name="ios">
 
     <config-file target="config.xml" parent="/*">
-      <feature name="TabBarUnselected">
+      <feature name="CDVTabBarUnselected">
         <param name="ios-package" value="CDVTabBarUnselected" />
       </feature>
        <plugin name="CDVTabBarUnselected" value="CDVTabBarUnselected"/>
