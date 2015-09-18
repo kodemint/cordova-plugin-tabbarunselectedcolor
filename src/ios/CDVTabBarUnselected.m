@@ -33,9 +33,9 @@
     //     item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     // }
 
-    // CDVPluginResult* presult = [CDVPluginResult
-    //                            resultWithStatus:CDVCommandStatus_OK
-    //                            messageAsString:msg];
+    CDVPluginResult* presult = [CDVPluginResult
+                               resultWithStatus:CDVCommandStatus_OK
+                               messageAsString:msg];
 
     [self.commandDelegate sendPluginResult:presult callbackId:callbackId];
 
