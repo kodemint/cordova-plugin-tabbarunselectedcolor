@@ -20,21 +20,22 @@
     // UIViewController *rootViewController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
     // if (rootViewController == nil)
     //     NSLog(@"Error- No Root Found"); 
-
-    // UITabBarController *tabBarController = (UITabBarController *)rootViewController;
-    // if (tabBarController == nil)
-    //     NSLog(@"Error- No Tab Controller Found"); 
-
-    // UITabBar *tabBar = tabBarController.tabBar;
     
-    // if (tabBar == nil)
-    //     NSLog(@"Error- No Tab Bar Found"); 
+    UITabBarController *tabBarController = (UITabBarController *)self.webView.superview.presentingViewController;
+    if (tabBarController == nil)
+        NSLog(@"Error- No Tab Controller Found"); 
+    NSLog(@"%@", tabBarController);
 
-    // // [tabBar setTintColor:[UIColor blueColor]];
-    // UIColor * unselectedColor = [UIColor whiteColor];
-    // for(UITabBarItem *item in tabBar.items) {
-    //     item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    // }
+    UITabBar *tabBar = tabBarController.tabBar;
+    
+    if (tabBar == nil)
+        NSLog(@"Error- No Tab Bar Found"); 
+
+    // [tabBar setTintColor:[UIColor blueColor]];
+    UIColor * unselectedColor = [UIColor whiteColor];
+    for(UITabBarItem *item in tabBar.items) {
+        item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }
 
     CDVPluginResult* presult = [CDVPluginResult
                                resultWithStatus:CDVCommandStatus_OK
