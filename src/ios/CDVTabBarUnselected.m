@@ -15,15 +15,18 @@
     UIViewController *rootViewController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
     if (rootViewController == nil)
         NSLog(@"Error- No Root Found"); 
+    NSLog(rootViewController); 
 
     UITabBarController *tabBarController = (UITabBarController *)rootViewController;
     if (tabBarController == nil)
         NSLog(@"Error- No Tab Controller Found"); 
+    NSLog(tabBarController); 
 
     UITabBar *tabBar = tabBarController.tabBar;
     
     if (tabBar == nil)
         NSLog(@"Error- No Tab Bar Found"); 
+    NSLog(tabBar); 
 
     // [tabBar setTintColor:[UIColor blueColor]];
     UIColor * unselectedColor = [UIColor whiteColor];
