@@ -1,5 +1,5 @@
 module.exports = {
-    setColorforUnselected: function (color, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "CDVTabBarUnselected", "setColorforUnselected", [color]);
+    setColorforUnselected: function (colord, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "CDVTabBarUnselected", "setColorforUnselected", [colord]);
     }
 };
