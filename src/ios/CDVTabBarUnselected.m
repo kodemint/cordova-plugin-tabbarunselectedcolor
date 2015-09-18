@@ -3,6 +3,9 @@
 
 @implementation CDVTabBarUnselected
 
+#ifndef __IPHONE_3_0
+@synthesize webView;
+#endif
 
 - (void)setColorforUnselected:(CDVInvokedUrlCommand*)command
 {
