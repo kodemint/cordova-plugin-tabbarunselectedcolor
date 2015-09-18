@@ -12,14 +12,24 @@
 
 
 
-    // UIViewController *rootViewController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
-    // UITabBarController *tabBarController = (UITabBarController *)rootViewController;
-    // UITabBar *tabBar = tabBarController.tabBar;
-    // [tabBar setTintColor:[UIColor blueColor]];
-    // UIColor * unselectedColor = [UIColor whiteColor];
-    // for(UITabBarItem *item in tabBar.items) {
-    //     item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    // }
+    UIViewController *rootViewController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+    if (rootViewController == nil)
+        NSLog(@"Error- No Root Found"); 
+
+    UITabBarController *tabBarController = (UITabBarController *)rootViewController;
+    if (tabBarController == nil)
+        NSLog(@"Error- No Tab Controller Found"); 
+
+    UITabBar *tabBar = tabBarController.tabBar;
+    
+    if (tabBarController == nil)
+        NSLog(@"Error- No Tab Bar Found"); 
+
+    [tabBar setTintColor:[UIColor blueColor]];
+    UIColor * unselectedColor = [UIColor whiteColor];
+    for(UITabBarItem *item in tabBar.items) {
+        item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }
 
     CDVPluginResult* presult = [CDVPluginResult
                                resultWithStatus:CDVCommandStatus_OK
