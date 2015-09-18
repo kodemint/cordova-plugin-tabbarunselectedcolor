@@ -22,10 +22,10 @@
 
     UITabBar *tabBar = tabBarController.tabBar;
     
-    if (tabBarController == nil)
+    if (tabBar == nil)
         NSLog(@"Error- No Tab Bar Found"); 
 
-    [tabBar setTintColor:[UIColor blueColor]];
+    // [tabBar setTintColor:[UIColor blueColor]];
     UIColor * unselectedColor = [UIColor whiteColor];
     for(UITabBarItem *item in tabBar.items) {
         item.image = [[item.selectedImage imageWithColor:unselectedColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
