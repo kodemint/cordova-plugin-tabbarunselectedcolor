@@ -11,7 +11,7 @@
 {
     NSString* callbackId = [command callbackId];
     NSString* color = [[command arguments] objectAtIndex:0];
-    
+    [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0.0, -5.0)];
     UITabBarController *tabBarController = (UITabBarController *)self.viewController.tabBarController;
     
     if (tabBarController == nil)
